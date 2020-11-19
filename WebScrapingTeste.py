@@ -2,8 +2,8 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 from selenium import webdriver
-# from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.options import Options
+# from selenium.webdriver.chrome.options import Options
 import json
 
 
@@ -54,8 +54,8 @@ def buildrank(type):
 
 option = Options()
 # option.headless = True
-# driver = webdriver.Firefox(options=option)
-driver = webdriver.chrome(Options=option)
+driver = webdriver.Firefox(options=option)
+# driver = webdriver.chrome(Options=option)
 
 driver.get(url)
 # time.sleep(10)
