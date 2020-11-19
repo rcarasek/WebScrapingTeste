@@ -6,7 +6,19 @@ headers  = {"User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit
 
 
 page = requests.get(URL, headers = headers)
-print(page)
+soup = BeautifulSoup(page.content, 'html.parser')
+
+#    print(soup.prettify())
+title = soup.find(id = "productTitle")
+print(title)
+print(title)
+print(title)
+print(title)
+
+
+
+
+
 
 
 """
