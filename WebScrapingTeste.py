@@ -2,7 +2,8 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
+# from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.chrome.options import Options
 import json
 
 
@@ -52,10 +53,13 @@ def buildrank(type):
 
 
 option = Options()
-option.headless = True
-driver = webdriver.Firefox(options=option)
+# option.headless = True
+# driver = webdriver.Firefox(options=option)
+driver = webdriver.chrome(Options=option)
 
 driver.get(url)
+# time.sleep(10)
+
 driver.implicitly_wait(10)  # in seconds
 
 for k in rankings:
